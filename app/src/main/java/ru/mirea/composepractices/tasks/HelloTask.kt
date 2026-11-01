@@ -4,8 +4,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
@@ -21,19 +23,31 @@ fun Hello(name: String?, modifier: Modifier = Modifier) {
     Text(text = message, modifier = modifier)
 }
 
-@Preview(name = "portrait", showSystemUi = true, widthDp = 360, heightDp = 640)
+@Preview(
+    name = "portrait",
+    showSystemUi = true,
+    device = "spec:width=360dp,height=640dp,dpi=160,orientation=portrait"
+)
 @Composable
 private fun HelloPortraitPreview() {
     PracticeTheme {
-        Hello(name = "Android", modifier = Modifier.padding(16.dp))
+        Box(modifier = Modifier.fillMaxSize().safeDrawingPadding()) {
+            Hello(name = "Android", modifier = Modifier.padding(16.dp))
+        }
     }
 }
 
-@Preview(name = "landscape", showSystemUi = true, widthDp = 640, heightDp = 360)
+@Preview(
+    name = "landscape",
+    showSystemUi = true,
+    device = "spec:width=360dp,height=640dp,dpi=160,orientation=landscape"
+)
 @Composable
 private fun HelloLandscapePreview() {
     PracticeTheme {
-        Hello(name = "Android", modifier = Modifier.padding(16.dp))
+        Box(modifier = Modifier.fillMaxSize().safeDrawingPadding()) {
+            Hello(name = "Android", modifier = Modifier.padding(16.dp))
+        }
     }
 }
 
@@ -47,8 +61,11 @@ private fun HelloLandscapePreview() {
 @Composable
 private fun HelloRoundPreview() {
     PracticeTheme {
-        Box(modifier = Modifier.fillMaxSize().background(Color.Yellow)) {
-            Hello(name = "Android", modifier = Modifier.padding(24.dp))
+        Box(
+            modifier = Modifier.fillMaxSize().background(Color.Yellow),
+            contentAlignment = Alignment.Center
+        ) {
+            Hello(name = "Android")
         }
     }
 }
