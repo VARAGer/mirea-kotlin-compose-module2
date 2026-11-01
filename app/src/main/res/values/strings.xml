@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Практика Compose</string>
+    <string name="module_title">Модуль 2</string>
+    <string name="task_title">Задание %1$d</string>
+    <string name="back">К заданиям</string>
+    <string name="hello">Привет, %1$s!</string>
+    <string name="name_not_set">Имя не задано</string>
+    <string name="compose_description">Jetpack Compose — это современный набор инструментов для создания пользовательского интерфейса (UI) на Android, разработанный Google</string>
+    <string name="button_label">Нажми на меня</string>
+    <string name="initials">АВ</string>
+</resources>
