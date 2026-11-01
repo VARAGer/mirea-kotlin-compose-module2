@@ -24,15 +24,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ru.mirea.composepractices.BuildConfig
 import ru.mirea.composepractices.R
+import ru.mirea.composepractices.cart.ShoppingCartTask
+import ru.mirea.composepractices.tasks.CircleTask
+import ru.mirea.composepractices.tasks.ContactsTask
 import ru.mirea.composepractices.tasks.Hello
 import ru.mirea.composepractices.tasks.InitialsTask
 import ru.mirea.composepractices.tasks.StyledButton
 import ru.mirea.composepractices.tasks.TextTask
+import ru.mirea.composepractices.water.WaterTracker
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PracticeApp(initialTask: Int = 0, modifier: Modifier = Modifier) {
-    var selectedTask by rememberSaveable { mutableIntStateOf(initialTask.coerceIn(0, 5)) }
+fun PracticeApp(modifier: Modifier = Modifier, initialTask: Int = 0) {
+    var selectedTask by rememberSaveable { mutableIntStateOf(initialTask.coerceIn(0, 10)) }
     BackHandler(enabled = selectedTask != 0) { selectedTask = 0 }
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -61,7 +65,7 @@ fun PracticeApp(initialTask: Int = 0, modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             when (selectedTask) {
-                0 -> (1..5).forEach { task ->
+                0 -> (1..10).forEach { task ->
                     Button(onClick = { selectedTask = task }, modifier = Modifier.fillMaxWidth()) {
                         Text(text = stringResource(R.string.task_title, task))
                     }
@@ -71,6 +75,11 @@ fun PracticeApp(initialTask: Int = 0, modifier: Modifier = Modifier) {
                 3 -> TextTask()
                 4 -> StyledButton()
                 5 -> InitialsTask()
+                6 -> CircleTask()
+                7 -> ContactsTask()
+                8 -> WaterTracker()
+                9 -> Text(text = stringResource(R.string.water_test_hint))
+                10 -> ShoppingCartTask()
             }
         }
     }

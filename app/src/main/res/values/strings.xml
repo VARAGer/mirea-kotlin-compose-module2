@@ -9,4 +9,24 @@
     <string name="compose_description">Jetpack Compose — это современный набор инструментов для создания пользовательского интерфейса (UI) на Android, разработанный Google</string>
     <string name="button_label">Нажми на меня</string>
     <string name="initials">АВ</string>
+    <string name="circle_original">Круг исходного размера справа вверху</string>
+    <string name="circle_stretched">Фиолетовый круг с растяжением</string>
+    <string name="contact_first_name">Имя: %1$s</string>
+    <string name="contact_patronymic">Отчество: %1$s</string>
+    <string name="contact_last_name">Фамилия: %1$s</string>
+    <string name="contact_phone">Мобильный телефон: %1$s</string>
+    <string name="contact_address">Адрес: %1$s</string>
+    <string name="not_specified">—</string>
+    <string name="water_title">Трекер воды</string>
+    <string name="water_volume">%1$d мл</string>
+    <string name="add_water">+%1$d мл</string>
+    <string name="finish_day">Завершить день</string>
+    <string name="water_streak">Дней подряд с %1$d мл и больше: %2$d</string>
+    <string name="water_test_hint">UI-тесты трекера находятся в WaterTrackerUiTest. Откройте задание 8 для проверки приложения.</string>
+    <string name="free_delivery">Доставка бесплатная!</string>
+    <string name="product_name">Товар #%1$d</string>
+    <string name="product_row">%1$s — %2$d рублей</string>
+    <string name="cart_total">Товаров на сумму: %1$d рублей</string>
+    <string name="add_product">Добавить товар</string>
+    <string name="remove_product">Удалить товар</string>
 </resources>
